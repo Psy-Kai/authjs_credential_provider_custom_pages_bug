@@ -14,6 +14,7 @@
 </script>
 
 <main>
+    <a href="/">Back</a>
     <h1>
         Login with <a href="https://authjs.dev/reference/utilities/#specifying-a-callbackurl">
             CallbackUrl
@@ -28,4 +29,10 @@
             <button type="submit">Login</button>
         </div>
     </form>
+    <h1>What happens</h1>
+    When submitting credentials the link parameter changes to
+    <code>/login?callbackURL=...</code>
+    <h1>Expectation</h1>
+    When submitting credentials the link parameter should show
+    <code>/login&error=CredentialsSign</code>.
 </main>

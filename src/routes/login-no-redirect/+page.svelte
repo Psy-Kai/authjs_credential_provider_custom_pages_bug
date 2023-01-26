@@ -13,10 +13,10 @@
 </script>
 
 <main>
+    <a href="/">Back</a>
     <h1>
-        Login without <a
-            href="https://authjs.dev/reference/utilities/#using-the-redirect-false-option"
-        >
+        Login without
+        <a href="https://authjs.dev/reference/utilities/#using-the-redirect-false-option">
             Redirect
         </a>
     </h1>
@@ -29,9 +29,21 @@
             <button type="submit">Login</button>
         </div>
     </form>
+
+    <h1>What happens</h1>
+    When submitting credentials the responded json object just contains
+    <code>
+        {'{'}"url":"http://localhost:5173/auth/error?error=CredentialsSignin&provider=credentials"{'}'}}
+    </code>.
+    <h1>Expectation</h1>
+    When submitting credentials the responded json object should look like
+    <a href="https://authjs.dev/reference/utilities/#using-the-redirect-false-option">
+        documented
+    </a>.
+    <h1>Submit credentials to display response json:</h1>
     {#if signInResponse}
         <div>
-            response is:<br />{JSON.stringify(signInResponse)}
+            {JSON.stringify(signInResponse)}
         </div>
     {/if}
 </main>
