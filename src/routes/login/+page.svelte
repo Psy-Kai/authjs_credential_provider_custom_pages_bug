@@ -31,8 +31,8 @@
     </form>
     <h1>What happens</h1>
     When submitting credentials the link parameter changes to
-    <code>/login?callbackURL=...</code>
+    <code>/login?callbackUrl=...</code>
     <h1>Expectation</h1>
     When submitting credentials the link parameter should show
-    <code>/login&error=CredentialsSign</code>.
+    <code>/login?error=CredentialsSign</code>.
 </main>
